@@ -8,9 +8,10 @@ public class AppStart {
         "app_context.xml"
     );
 
-    IMusic misic = context.getBean("musicBean", IMusic.class);
 
-    MusicPlayer mp = new MusicPlayer(misic);
+    MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
+
+
     mp.PlaySound();
 
     context.close();
