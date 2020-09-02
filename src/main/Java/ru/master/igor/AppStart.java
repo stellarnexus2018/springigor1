@@ -13,6 +13,8 @@ public class AppStart {
 
 
     mp.PlaySound();
+    System.out.println(mp.getName());
+    System.out.println(mp.getVolume());
 
     context.close();
 
