@@ -10,16 +10,20 @@
   <context:property-placeholder location="classpath:app_props.properties"/>
 
   <bean id="musicBean"
-        class="ru.master.igor.TranceMusic">
+        class="ru.master.igor.TranceMusic"
+        init-method="doMyInit"
+        destroy-method="doMyDestroy"
+        scope="singleton"
+        factory-method="obtainNewInstance">
   </bean>
 
-  <bean id="musicPlayer" class="ru.master.igor.MusicPlayer" scope="prototype">
-    <!--<constructor-arg ref="musicBean"/>-->
+  <!--<bean id="musicPlayer" class="ru.master.igor.MusicPlayer" scope="prototype">
+    &lt;!&ndash;<constructor-arg ref="musicBean"/>&ndash;&gt;
     <property name="imuse" ref="musicBean"/>
     <property name="name" value="${myprops.name}"/>
     <property name="volume" value="${myprops.volume}"/>
     <property name="is_now" value="${myprops.is_now}"/>
   </bean>
-
+-->
 
 </beans>
