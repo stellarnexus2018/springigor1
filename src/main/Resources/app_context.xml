@@ -13,11 +13,12 @@
         class="ru.master.igor.TranceMusic">
   </bean>
 
-  <bean id="musicPlayer" class="ru.master.igor.MusicPlayer">
+  <bean id="musicPlayer" class="ru.master.igor.MusicPlayer" scope="prototype">
     <!--<constructor-arg ref="musicBean"/>-->
     <property name="imuse" ref="musicBean"/>
     <property name="name" value="${myprops.name}"/>
     <property name="volume" value="${myprops.volume}"/>
+    <property name="is_now" value="${myprops.is_now}"/>
   </bean>
 
 
