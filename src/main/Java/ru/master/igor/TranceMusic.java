@@ -1,5 +1,8 @@
 package ru.master.igor;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TranceMusic implements IMusic {
 
   private TranceMusic(){}
