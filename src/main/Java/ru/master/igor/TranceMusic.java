@@ -6,13 +6,12 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
-@Scope("singleton")
+
 public class TranceMusic implements IMusic {
 
-  private TranceMusic(){
+  /*private TranceMusic(){
     System.out.println("in ctor");
-  }
+  }*/
 
   public static TranceMusic obtainNewInstance(){
     return new TranceMusic();

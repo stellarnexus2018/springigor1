@@ -7,8 +7,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 
-@Component
-@Scope("prototype")
 public class MetalMusic implements IMusic {
   @Override
   public String getSong() {
