@@ -11,9 +11,17 @@ public class AppStart {
 
 
 
-    MusicPlayer mp = context.getBean("mus_pl", MusicPlayer.class);
+    /*MusicPlayer mp = context.getBean("mus_pl", MusicPlayer.class);
     mp.PlaySound();
+*/
 
+
+
+//    IMusic mus1 = context.getBean("metalMusic", MetalMusic.class);
+    IMusic mus2 = context.getBean("tranceMusic", TranceMusic.class);
+
+//    System.out.println(mus1.getSong());
+    System.out.println(mus2.getSong());
 
 
 

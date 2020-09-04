@@ -1,22 +1,31 @@
 package ru.master.igor;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
+@Scope("singleton")
 public class TranceMusic implements IMusic {
 
-  private TranceMusic(){}
+  private TranceMusic(){
+    System.out.println("in ctor");
+  }
 
   public static TranceMusic obtainNewInstance(){
     return new TranceMusic();
   }
 
+  @PostConstruct
   public void doMyInit() {
-    System.out.println("Doing my initialization");
+    System.out.println("init bean");
   }
 
+  @PreDestroy
   public void doMyDestroy() {
-    System.out.println("Doing my destroy");
+    System.out.println("destroy bean");
   }
 
 
