@@ -23,6 +23,4 @@ public class SpringConfig {
   public MusicPlayer musicPlayer(){
     return new MusicPlayer(tranceMusic(), metalMusic());
   }
-
-
 }
