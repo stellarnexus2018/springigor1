@@ -8,7 +8,7 @@ public class AppStart {
     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
     MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
     mp.PlaySound();
-    
+
     context.close();
   }
 }
