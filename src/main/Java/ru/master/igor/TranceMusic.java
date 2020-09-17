@@ -27,8 +27,6 @@ public class TranceMusic implements IMusic {
     System.out.println("destroy bean");
   }
 
-
-
   @Override
   public String getSong() {
     return "Mars4";
