@@ -9,6 +9,7 @@ public class AppStart {
     MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
     mp.PlaySound();
 
+    // закрываем контекст
     context.close();
   }
 }
