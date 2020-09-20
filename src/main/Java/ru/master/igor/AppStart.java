@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AppStart {
   public static void main(String[] args) {
     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
-    MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
+    MusicPlayer mp = context.getBean("musicPlayer1", MusicPlayer.class);
     mp.PlaySound();
 
     // закрываем контекст

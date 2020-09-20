@@ -23,4 +23,9 @@ public class SpringConfig {
   public MusicPlayer musicPlayer(){
     return new MusicPlayer(tranceMusic(), metalMusic());
   }
+
+  @Bean
+  public MusicPlayer musicPlayer1(){
+    return new MusicPlayer(tranceMusic(), metalMusic());
+  }
 }
